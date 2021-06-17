@@ -18,3 +18,4 @@ What you need do is to modify the BIOS value by setup_var of GRUB. You need to c
 7. The power comsumption of usb device is very high compared to linux and the usb hub chip on the keyboard(productive kit) is very hot. I didn't figure out the reason. Also I can tell you that linux is much lagger than windows.
 
 8. The psr and dpst are not supported by i915.
+some information here: https://blog.mynoee.com/archives/180/
