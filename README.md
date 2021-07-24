@@ -9,7 +9,11 @@
 3. The two cameras cannot work. The atomisp is still under development and unusable.(Today is 2021 but the baytrail platform is released in 2014-2015? It has been years since that and I don't know whether it will be supported anymore.) I don't see any work for imx175 on the TODO list of atomisp, only the ov2722 and lm3455.
 What you first need to do is modifying the BIOS value by setup_var of GRUB. You need to change the atomisp from subdevice of IGD to PCI. This setting is not exposed in the BIOS setup menu.(UEFITool, IFR Extractor)
 
-4. The sound card works partly. The speaker is ok but the internal MEMS digital mic and the jack don't work. You can try to use a usb sound card now. But since the usb hub uses a module to turn from 3.3v to 5.1v, using too much usb device will cause battery problem. Besides, on windows the OS use nearly no cpu to process audio, but in linux the situation is too bad.
+4. Sound Card Fixing: https://bugzilla.kernel.org/show_bug.cgi?id=213415
+   The Headphone is just the lineout, with a extra headphone amplifier. It really improve the quality of the audio.
+   Some packs have been uploaded to this repo.
+   a. A driver in dkms type. The official driver will be merged to the mainline soon.
+   b. alsa-ucm-conf debian package modified from the ubuntu source.
 
 5. The wwan is not work out-of-box and need to be set manually . You can google to find the solution.
 
