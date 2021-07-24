@@ -14,6 +14,10 @@ What you first need to do is modifying the BIOS value by setup_var of GRUB. You 
    Some packs have been uploaded to this repo.
    a. A driver in dkms type. The official driver will be merged to the mainline soon.
    b. alsa-ucm-conf debian package modified from the ubuntu source.
+   
+   Install the things above and put "snd_soc_sst_bytcr_rt5640.quirk=0x6400002" to the /etc/default/grub, then the jack audio is ok.
+   
+   The Internal Mic is still needed to be fix later.
 
 5. The wwan is not work out-of-box and need to be set manually . You can google to find the solution.
 
